@@ -6,4 +6,13 @@ The core of demonstration is only 8 lines in "main.py". See "login_required" dec
 
 I don't claim any copyright licenses and terms for my files: "main.py", "app.py", "app.yaml", "shell" and "base.html". Please feel free to copy or use these files.
 
+You may want to restrict page accesses to users in a specific Google Apps domain. This is easy by checking email address of login user.
+
+  user = users.get_current_user()
+  username, domain = user.email().split('@', 1)
+  if domain not in authorized_domains:
+    return redirect(users.create_login_url())
+
+See https://github.com/sgk/google-auth-demo for the detail of the GAE Users API.
+
 //sgk
