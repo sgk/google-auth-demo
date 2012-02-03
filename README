@@ -1,0 +1,9 @@
+Google Auth Demo
+
+Just a simple Google App Engine application to demonstrate the use of the GAE users API to authenticate users against Google Accounts. Such Google Accounts includes users in non-Google domain managed by Google Apps.
+
+The core of demonstration is only 8 lines in "main.py". See "login_required" decorator function. Other directories and files are from Flask, Werkzeug, Jinja2 and Bootstrap, which is not essential to this demonstration purpose.
+
+I don't claim any copyright licenses and terms for my files: "main.py", "app.py", "app.yaml", "shell" and "base.html". Please feel free to copy or use these files.
+
+//sgk
