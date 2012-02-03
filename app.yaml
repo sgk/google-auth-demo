@@ -1,0 +1,19 @@
+application: application-id-of-your-own
+version: 1
+runtime: python
+api_version: 1
+
+builtins:
+- remote_api: on
+- datastore_admin: on
+
+handlers:
+- url: /static/(.*)
+  static_files: static/\1
+  upload: static/(.*)
+
+- url: /_ah/login_required
+  script: app.py
+
+- url: .*
+  script: app.py

@@ -1,0 +1,3 @@
+#!/bin/sh
+export PYTHONPATH=../google_appengine:../google_appengine/lib/yaml/lib:../google_appengine/lib/fancy_urllib
+exec ipython
