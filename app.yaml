@@ -1,11 +1,8 @@
 application: application-id-of-your-own
 version: 1
-runtime: python
+runtime: python27
 api_version: 1
-
-builtins:
-- remote_api: on
-- datastore_admin: on
+threadsafe: true
 
 handlers:
 - url: /static/(.*)
@@ -13,7 +10,7 @@ handlers:
   upload: static/(.*)
 
 - url: /_ah/login_required
-  script: app.py
+  script: main.app
 
 - url: .*
-  script: app.py
+  script: main.app
